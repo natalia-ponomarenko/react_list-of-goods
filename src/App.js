@@ -45,15 +45,15 @@ class App extends React.Component {
   sortByLength = () => {
     this.setState(prevState => ({
       goods: [...prevState.goods].sort(
-        (current, next) => next.length - current.length,
+        (current, next) => current.length - next.length,
       ),
     }));
   }
 
   resetList = () => {
-    this.setState(() => ({
+    this.setState({
       goods: goodsFromServer,
-    }));
+    });
   }
 
   render() {
